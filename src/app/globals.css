@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+/* Define theme variables for light and dark modes */
+:root {
+  /* Light Theme (Aged Paper Look) */
+  --color-bg-paper-light: #f5f5dc; /* Aged paper beige */
+  --color-bg-torn-light: #f5f5dc; /* Same as paper for torn effect */
+  --color-text-primary-light: #4a3728; /* Dark sepia for headings */
+  --color-text-secondary-light: #8b6f47; /* Medium sepia for body text */
+  --color-text-accent-light: #d4a017; /* Golden accent for emphasis */
+  --color-doodle-light: #8b6f47; /* Medium sepia for doodles and borders */
+  --color-button-bg-light: #f4a261; /* Orange for buttons */
+  --color-button-text-light: #f5f5dc; /* Off-white for button text */
+  --color-button-bg-hover-light: #e76f51; /* Darker orange on hover */
+  --color-spiral-light: #d3d3d3; /* Light gray for spiral */
+  --color-spiral-ring-light: #a9a9a9; /* Darker gray for spiral rings */
+
+  /* Dark Theme (Chalkboard Look) */
+  --color-bg-paper-dark: #2f2f2f; /* Dark gray chalkboard */
+  --color-bg-torn-dark: #2f2f2f; /* Same as chalkboard for torn effect */
+  --color-text-primary-dark: #ffffff; /* White chalk for headings */
+  --color-text-secondary-dark: #d3d3d3; /* Light gray for body text */
+  --color-text-accent-dark: #ffeb3b; /* Yellow chalk for emphasis */
+  --color-doodle-dark: #d3d3d3; /* Light gray for doodles and borders */
+  --color-button-bg-dark: #4caf50; /* Green for buttons (chalkboard green) */
+  --color-button-text-dark: #ffffff; /* White for button text */
+  --color-button-bg-hover-dark: #388e3c; /* Darker green on hover */
+  --color-spiral-dark: #4a3728; /* Dark sepia for spiral */
+  --color-spiral-ring-dark: #8b6f47; /* Medium sepia for spiral rings */
+}
+
+/* Apply theme variables based on data-theme attribute */
+[data-theme="light"] {
+  --color-bg-paper: var(--color-bg-paper-light);
+  --color-bg-torn: var(--color-bg-torn-light);
+  --color-text-primary: var(--color-text-primary-light);
+  --color-text-secondary: var(--color-text-secondary-light);
+  --color-text-accent: var(--color-text-accent-light);
+  --color-doodle: var(--color-doodle-light);
+  --color-button-bg: var(--color-button-bg-light);
+  --color-button-text: var(--color-button-text-light);
+  --color-button-bg-hover: var(--color-button-bg-hover-light);
+  --color-spiral: var(--color-spiral-light);
+  --color-spiral-ring: var(--color-spiral-ring-light);
+}
+
+[data-theme="dark"] {
+  --color-bg-paper: var(--color-bg-paper-dark);
+  --color-bg-torn: var(--color-bg-torn-dark);
+  --color-text-primary: var(--color-text-primary-dark);
+  --color-text-secondary: var(--color-text-secondary-dark);
+  --color-text-accent: var(--color-text-accent-dark);
+  --color-doodle: var(--color-doodle-dark);
+  --color-button-bg: var(--color-button-bg-dark);
+  --color-button-text: var(--color-button-text-dark);
+  --color-button-bg-hover: var(--color-button-bg-hover-dark);
+  --color-spiral: var(--color-spiral-dark);
+  --color-spiral-ring: var(--color-spiral-ring-dark);
+}
+
+/* Existing styles */
+body {
+  background: var(--color-bg-paper);
+  font-family: "Caveat", cursive;
+}
+
+.font-handwritten {
+  font-family: "Caveat", cursive;
+}
+
+.underline-doodle {
+  text-decoration-color: var(--color-doodle);
+}
